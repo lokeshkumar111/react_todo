@@ -1,0 +1,17 @@
+.Navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid greenyellow;
+    height: max-content;
+    align-items: center;
+}
+.logo{
+    margin-left: 10px;
+}
+.otherDiv{
+    display: flex;
+    flex-direction: row;
+    margin-right: 10px;
+    gap: 100px;
+}
