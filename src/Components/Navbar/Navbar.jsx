@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './Navbar.module.css';
-const Navbar = () => {
+import { Link } from 'react-router-dom';
+const Navbar = ({handlePopUpAddTodo}) => {
   return (
     <div className={styles.Navbar}>
       <div className={styles.logo}>
@@ -8,8 +9,8 @@ const Navbar = () => {
       </div>
       <div className={styles.otherDiv}>
         <h3>Star *</h3>
-        <h3>Todo List</h3>
-        <h3>Add Todo +</h3>
+        <h3><Link to="/todolist">Todo List</Link></h3>
+        <h3><Link to="/addtodo" onClick={handlePopUpAddTodo}>Add Todo +</Link></h3>
         <h3>Delete</h3>
       </div>
     </div>

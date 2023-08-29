@@ -1,0 +1,32 @@
+{
+  "todos": [
+    {
+      "id": 3,
+      "title": "Learn Node.js",
+      "priority": "low",
+      "completed": false
+    },
+    {
+      "id": 4,
+      "title": "Learn CSS",
+      "priority": "high",
+      "completed": false
+    },
+    {
+      "id": 5,
+      "title": "Learn MongoDB",
+      "priority": "high",
+      "completed": false
+    },
+    {
+      "id": 6,
+      "title": "Learn Dance",
+      "priority": "high"
+    },
+    {
+      "id": 7,
+      "title": "Learn how to learn",
+      "completed": true
+    }
+  ]
+}
