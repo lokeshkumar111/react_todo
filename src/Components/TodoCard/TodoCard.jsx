@@ -3,11 +3,13 @@ import styles from './TodoCard.module.css';
 import axios from 'axios';
 
 const TodoCard = ({ ele, onDelete }) => {
-  const [priority, setPriority] = useState(false);
+  const [priority, setPriority] = useState(ele.priority);
 
   const handlePriority = async () => {
     try {
-      const newPriority = !priority ? 'high' : 'low';
+      // const newPriority = !priority ? 'high' : 'low';
+      const newPriority = priority==='low' ? 'high' : 'low';
+     
       const res = await axios.put(`http://localhost:5000/todos/${ele.id}`, {
         id:ele.id,
         title:ele.title,
@@ -36,12 +38,23 @@ const TodoCard = ({ ele, onDelete }) => {
     }
   };
 
+  const handleDeleteTodo=async()=>{
+    try{
+      const res = await axios.delete(`http://localhost:5000/todos/${ele.id}`);
+      console.log(res.data);
+      onDelete(ele.id);
+    }
+    catch(error){
+      console.log("error while deleting todo items");
+    }
+  }
+
   return (
     <div className={styles.TodoCard}>
       <h4>{ele.title}</h4>
       <div className={styles.TodoCardButton}>
-        <button onClick={handlePriority}>{priority ? 'high' : 'low'}</button>
-        <button>Edit</button>
+        <button onClick={handlePriority}>{priority==='high'? "high" : "low"}</button>
+        <button onClick={handleDeleteTodo}>Delete</button>
         <button onClick={handleCompletedTodo}>Completed</button>
       </div>
     </div>

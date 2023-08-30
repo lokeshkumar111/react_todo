@@ -12,7 +12,7 @@ const Addtodo = ({handlePopUpAddTodo}) => {
 
   const SetAddTodo=async()=>{
       try{
-        const res = axios.post(`http://localhost:5000/todos`,{title:text});
+        const res = axios.post(`http://localhost:5000/todos`,{title:text, completed:false, priority:"low"});
         console.log("post new todo")
         handlePopUpAddTodo();
       }

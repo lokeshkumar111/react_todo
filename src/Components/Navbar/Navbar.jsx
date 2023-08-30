@@ -8,10 +8,10 @@ const Navbar = ({handlePopUpAddTodo}) => {
         <h1>My Todo</h1>
       </div>
       <div className={styles.otherDiv}>
-        <h3>Star *</h3>
+        <h3><Link to="/startodo">Star</Link></h3>
         <h3><Link to="/todolist">Todo List</Link></h3>
         <h3><Link to="/addtodo" onClick={handlePopUpAddTodo}>Add Todo +</Link></h3>
-        <h3>Delete</h3>
+        <h3><Link to="/completedtodo">Complete</Link></h3>
       </div>
     </div>
   )

@@ -6,7 +6,7 @@ import styles from './TodoList.module.css';
 const TodoList = () => {
     const[todo, setTodo] = useState([]);
 
-    const url = `http://localhost:5000/todos`;
+    const url = `http://localhost:5000/todos?completed=false`;
 
     const fetchTodo=async()=>{
         const res = await axios.get(url);
