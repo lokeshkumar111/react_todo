@@ -35,9 +35,10 @@ const CompletedTodo = () => {
 
   return (
     <div className={styles.completedContainer}>
+      <h1>Completed Todos</h1>
       {completedTodo.map((ele, i)=>(
-        <div key={i}>
-          <h4>{ele.title}</h4>
+        <div key={i} className={styles.completedContainerCard}>
+          <p>{ele.title}</p>
           <button onClick={() => deleteTodo(ele.id)}>Delete</button>
           </div>
       ))}

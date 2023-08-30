@@ -19,7 +19,7 @@ const AllRoutes = () => {
       <BrowserRouter>
             <Navbar handlePopUpAddTodo={handlePopUpAddTodo}/>
             <Routes>
-                <Route path='/startodo' element={<StarTodo/>}></Route>
+                <Route path='/favourites' element={<StarTodo/>}></Route>
                 <Route path='/addtodo' element={<Addtodo/>}></Route>
                 <Route path='/todolist' element={<TodoList handlePopUpAddTodo={handlePopUpAddTodo}/>}></Route>
                 <Route path='/completedtodo' element={<CompletedTodo/>}></Route>

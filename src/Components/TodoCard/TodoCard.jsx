@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './TodoCard.module.css';
 import axios from 'axios';
+import {FaStar} from 'react-icons/fa';
 
 const TodoCard = ({ ele, onDelete }) => {
   const [priority, setPriority] = useState(ele.priority);
@@ -53,7 +54,8 @@ const TodoCard = ({ ele, onDelete }) => {
     <div className={styles.TodoCard}>
       <h4>{ele.title}</h4>
       <div className={styles.TodoCardButton}>
-        <button onClick={handlePriority}>{priority==='high'? "high" : "low"}</button>
+        {/* <button onClick={handlePriority}>{priority==='high'? "high" : "low"}</button> */}
+        <button onClick={handlePriority}><FaStar data-icon="star" color={priority?'blue':'grey'} fontSize={'15px'}/></button>
         <button onClick={handleDeleteTodo}>Delete</button>
         <button onClick={handleCompletedTodo}>Completed</button>
       </div>

@@ -33,6 +33,7 @@ const StarTodo = () => {
 
   return (
     <div className={styles.starContainer}>
+      <h1>Favourite Todos</h1>
       {starTodo.map((ele, i) => (
         <div className={styles.starContainerCard} key={i}>
           <h4>{ele.title}</h4>
