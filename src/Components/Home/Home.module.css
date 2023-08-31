@@ -1,0 +1,90 @@
+.homeContainer{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    border-radius: 10px;
+    margin: 20px auto;
+    text-align: center;
+    position: relative;
+    top: 80px;
+    /* line-height: 5px; */
+    /* padding-top: 10px; */
+    padding: 10px;
+}
+.homeContainer>h4{
+    margin-top: -10px;
+}
+.homeContainer>p{
+ margin-top: 50px;
+ margin-bottom: 80px;
+}
+.homeContainer>a>button{
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 15px 40px 15px 40px;
+    font-size: larger;
+    border-radius: 10px;
+    border: none;
+    background-color: blue;
+    color: white;
+    letter-spacing: 1px;
+    width: 30%;
+    text-align: center;
+
+}
+.homeContainer>a>button:hover{
+    background-color: rgba(0, 0, 255, 0.767);
+    border-radius: 25px;
+}
+
+/* style for the tablet or mobile mode */
+
+@media screen and (min-width:500px) and (max-width: 768px) {
+    
+    .homeContainer>p{
+     margin-top: 50px;
+     margin-bottom: 50px;
+    }
+}
+
+@media screen and (min-width:500px) and (max-width: 630px) {
+    .homeContainer>a>button{
+        padding: 15px 40px 15px 40px;
+        font-size: large;
+        width:40%;
+    }
+    .homeContainer>a>button:hover{
+        border-radius: 25px;
+    }
+}
+
+/* style for mobile screen only */
+@media screen and (max-width:500px){
+    .homeContainer>p{
+        margin-top: 50px;
+        margin-bottom: 50px;
+       }
+       .homeContainer>a>button{
+           padding: 15px 40px 15px 40px;
+           font-size: large;
+           width:40%;
+       }
+       .homeContainer>a>button:hover{
+           border-radius: 15px;
+       }
+        
+}
+@media screen and (max-width:465px){
+    .homeContainer>a>button{
+        padding: 15px 40px 15px 40px;
+        font-size: large;
+        width:60%;
+    }
+    .homeContainer>a>button:hover{
+        border-radius: 15px;
+    }
+}
+
+

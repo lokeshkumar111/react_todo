@@ -1,5 +1,5 @@
 .AddTodoContainer{
-    width:35%;
+    width:70%;
     display: flex;
     flex-direction: column;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -29,13 +29,15 @@
     outline: none;
 }
 .AddTodoContainer>form>button{
-    padding: 10px 40px 10px 40px;
+    padding: 15px 40px 15px 40px;
     font-size: larger;
     border-radius: 10px;
     border: 1px solid blue;
     background-color: white;
     color: blue;
     letter-spacing: 1px;
+    width:30%;
+    margin-top: 40px;
 }
 .AddTodoContainer>form>button:disabled{
     background-color: white;
@@ -51,13 +53,14 @@
     background-color: blue;
     color:white;
     border: 1px solid blue;
+    border-radius: 25px;
 }
 
 
 /* style for the tablet or mobile mode */
 @media screen and (min-width:500px) and (max-width: 768px) {
     .AddTodoContainer{
-        width:40%;
+        width:70%;
     }
     .AddTodoContainer>form>input{
         width:80%;
@@ -84,17 +87,18 @@
         background-color: blue;
         color:white;
         border: 1px solid blue;
+        border-radius: 25px;
     }
 }
 
 /* style for mobile screen only */
 @media screen and (max-width:500px){
     .AddTodoContainer{
-        width:45%;
+        width:70%;
     }
     .AddTodoContainer>form>input{
-        width:80%;
-        font-size:medium;
+        width:70%;
+        font-size:large;
        
     }
     .AddTodoContainer>form>input:focus{
@@ -102,7 +106,7 @@
     }
     .AddTodoContainer>form>button{
         padding: 5px 20px 5px 20px;
-        font-size: medium;
+        font-size: large;
         border-radius: 5px;
     }
     .AddTodoContainer>form>button:disabled{
@@ -119,9 +123,20 @@
         background-color: blue;
         color:white;
         border: 1px solid blue;
+        border-radius: 25px;
     }
     .AddTodoContainer>form>h1{
         font-size: larger;
     }
         
+}
+
+@media screen and (max-width:380px){
+    .AddTodoContainer>form>button{
+        padding: 15px 70px 15px 40px;
+    
+    }
+    .AddTodoContainer>form>button:hover{
+        border-radius: 25px;
+    }
 }
