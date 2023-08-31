@@ -1,10 +1,10 @@
 .TodoListContainer{
-    width: 70%;
+    width: 90%;
     margin: 20px auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
     padding: 15px;
     border-radius: 5px;
     padding-bottom: 25px;
