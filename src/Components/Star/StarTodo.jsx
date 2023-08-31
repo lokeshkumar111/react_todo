@@ -5,9 +5,11 @@ import styles from './StarTodo.module.css';
 const StarTodo = () => {
   const [starTodo, setStarTodo] = useState([]);
 
+  const [scrollPosition, setScrollPosition] = useState(0);
+
   const fetchstarData = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/todos?priority=high&completed=false');
+      const res = await axios.get('https://places-59x7.onrender.com/todos?priority=high&completed=false');
       console.log(res.data);
       setStarTodo(res.data);
     } catch (error) {
@@ -21,7 +23,7 @@ const StarTodo = () => {
 
   async function deleteTodo(id) {
     try {
-      const res = await axios.delete(`http://localhost:5000/todos/${id}`);
+      const res = await axios.delete(`https://places-59x7.onrender.com/todos/${id}`);
       console.log(res.data);
 
       // Update the state to remove the deleted item
@@ -31,15 +33,34 @@ const StarTodo = () => {
     }
   }
 
+
+      // Slider Function
+      const starTodoSummary = document.querySelector(".starContainer");
+    
+      const upScroll = () => {
+        const newPosition = scrollPosition - 200;
+        setScrollPosition(newPosition < 0 ? 0 : newPosition);
+      }
+      
+      const downScroll = () => {
+        const newPosition = scrollPosition + 200;
+        setScrollPosition(newPosition > 500 ? 500 : newPosition);
+    
+      }
+      window.upScroll = upScroll;
+      window.downScroll = downScroll;
+
   return (
     <div className={styles.starContainer}>
       <h1>Favourite Todos</h1>
-      {starTodo.map((ele, i) => (
-        <div className={styles.starContainerCard} key={i}>
-          <h4>{ele.title}</h4>
-          <button onClick={() => deleteTodo(ele.id)}>Delete</button>
-        </div>
-      ))}
+      <div className={styles.scrollableContainer}>
+        {starTodo.map((ele, i) => (
+          <div className={styles.starContainerCard} key={i}>
+            <h4>{ele.title}</h4>
+            <button onClick={() => deleteTodo(ele.id)}>Delete</button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

@@ -11,7 +11,7 @@ const TodoCard = ({ ele, onDelete }) => {
       // const newPriority = !priority ? 'high' : 'low';
       const newPriority = priority==='low' ? 'high' : 'low';
      
-      const res = await axios.put(`http://localhost:5000/todos/${ele.id}`, {
+      const res = await axios.put(`https://places-59x7.onrender.com/todos/${ele.id}`, {
         id:ele.id,
         title:ele.title,
         priority: newPriority,
@@ -26,7 +26,7 @@ const TodoCard = ({ ele, onDelete }) => {
 
   const handleCompletedTodo = async () => {
     try {
-      const res = await axios.put(`http://localhost:5000/todos/${ele.id}`, {
+      const res = await axios.put(`https://places-59x7.onrender.com/todos/${ele.id}`, {
         id:ele.id,
         title:ele.title,
         priority:ele.priority,
@@ -41,7 +41,7 @@ const TodoCard = ({ ele, onDelete }) => {
 
   const handleDeleteTodo=async()=>{
     try{
-      const res = await axios.delete(`http://localhost:5000/todos/${ele.id}`);
+      const res = await axios.delete(`https://places-59x7.onrender.com/todos/${ele.id}`);
       console.log(res.data);
       onDelete(ele.id);
     }

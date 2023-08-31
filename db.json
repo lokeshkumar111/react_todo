@@ -1,10 +1,10 @@
 {
   "todos": [
     {
+      "id": 16,
       "title": "22",
-      "completed": false,
       "priority": "low",
-      "id": 16
+      "completed": true
     },
     {
       "id": 17,
@@ -13,32 +13,14 @@
       "completed": true
     },
     {
+      "id": 19,
       "title": "66",
-      "completed": false,
       "priority": "low",
-      "id": 19
+      "completed": false
     },
     {
+      "id": 20,
       "title": "77",
-      "completed": false,
-      "priority": "low",
-      "id": 20
-    },
-    {
-      "id": 21,
-      "title": "88",
-      "priority": "low",
-      "completed": true
-    },
-    {
-      "title": "12",
-      "completed": false,
-      "priority": "low",
-      "id": 22
-    },
-    {
-      "id": 31,
-      "title": "Learn Data structure and Algorithm",
       "priority": "high",
       "completed": true
     },
@@ -47,6 +29,126 @@
       "title": "Learn HTML",
       "priority": "low",
       "completed": true
+    },
+    {
+      "id": 33,
+      "title": "aaa",
+      "priority": "high",
+      "completed": false
+    },
+    {
+      "id": 34,
+      "title": "leran gjkdflgdfk",
+      "priority": "high",
+      "completed": true
+    },
+    {
+      "id": 35,
+      "title": "revise dsa",
+      "priority": "high",
+      "completed": true
+    },
+    {
+      "id": 36,
+      "title": "go to walk",
+      "priority": "high",
+      "completed": true
+    },
+    {
+      "id": 37,
+      "title": "work hard",
+      "priority": "high",
+      "completed": true
+    },
+    {
+      "id": 38,
+      "title": "write leter",
+      "priority": "high",
+      "completed": true
+    },
+    {
+      "id": 39,
+      "title": "learn kung fu ",
+      "priority": "high",
+      "completed": true
+    },
+    {
+      "id": 40,
+      "title": "hell world",
+      "priority": "high",
+      "completed": true
+    },
+    {
+      "id": 41,
+      "title": "go to school",
+      "priority": "high",
+      "completed": true
+    },
+    {
+      "id": 42,
+      "title": "food poisioning",
+      "priority": "high",
+      "completed": false
+    },
+    {
+      "id": 43,
+      "title": "food plaza",
+      "priority": "high",
+      "completed": false
+    },
+    {
+      "id": 44,
+      "title": "go to park ",
+      "priority": "high",
+      "completed": false
+    },
+    {
+      "id": 45,
+      "title": "lion in the jungle",
+      "priority": "low",
+      "completed": true
+    },
+    {
+      "id": 46,
+      "title": "happy holi",
+      "priority": "high",
+      "completed": false
+    },
+    {
+      "id": 47,
+      "title": "college connection",
+      "priority": "high",
+      "completed": false
+    },
+    {
+      "id": 48,
+      "title": "college placement",
+      "priority": "high",
+      "completed": false
+    },
+    {
+      "id": 49,
+      "title": "full stack developer ",
+      "priority": "high",
+      "completed": false
+    },
+    {
+      "id": 50,
+      "title": "back end developer ",
+      "priority": "high",
+      "completed": false
+    },
+    {
+      "title": "full stack developer",
+      "completed": false,
+      "priority": "low",
+      "id": 51
+    },
+    {
+      "title": " vvvv",
+      "completed": false,
+      "priority": "low",
+      "id": 52
     }
   ]
 }

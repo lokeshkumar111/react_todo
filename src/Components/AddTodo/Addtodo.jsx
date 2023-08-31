@@ -12,8 +12,9 @@ const Addtodo = ({handlePopUpAddTodo}) => {
 
   const SetAddTodo=async()=>{
       try{
-        const res = axios.post(`http://localhost:5000/todos`,{title:text, completed:false, priority:"low"});
-        console.log("post new todo")
+        const res = axios.post(`https://places-59x7.onrender.com/todos`,{title:text, completed:false, priority:"low"});
+        console.log("post new todo");
+        console.log(res.data);
         handlePopUpAddTodo();
       }
       catch(error){
@@ -24,7 +25,7 @@ const Addtodo = ({handlePopUpAddTodo}) => {
     <div className={styles.AddTodoContainer}>
       <form>
         <h1>Add Todo</h1>
-        <input placeholder='Enter Todo' onChange={handleText} required/>
+        <input placeholder='Enter Todo...' onChange={handleText} required/>
         <br/>
         <button onClick={SetAddTodo} disabled={text.length<=1}>Add</button>
         <br/>

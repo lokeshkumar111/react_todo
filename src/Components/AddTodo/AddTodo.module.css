@@ -6,6 +6,8 @@
     border-radius: 10px;
     margin: 20px auto;
     text-align: center;
+    position: relative;
+    top: 80px;
 }
 .AddTodoContainer>form{
     display: flex;
@@ -21,6 +23,7 @@
     border-top: none;
     border-left:none;
     border-right: none;
+    border-color: blue;
 }
 .AddTodoContainer>form>input:focus{
     outline: none;
@@ -29,9 +32,9 @@
     padding: 10px 40px 10px 40px;
     font-size: larger;
     border-radius: 10px;
-    border: 1px solid grey;
+    border: 1px solid blue;
     background-color: white;
-    color: black;
+    color: blue;
     letter-spacing: 1px;
 }
 .AddTodoContainer>form>button:disabled{
@@ -48,4 +51,77 @@
     background-color: blue;
     color:white;
     border: 1px solid blue;
+}
+
+
+/* style for the tablet or mobile mode */
+@media screen and (min-width:500px) and (max-width: 768px) {
+    .AddTodoContainer{
+        width:40%;
+    }
+    .AddTodoContainer>form>input{
+        width:80%;
+        font-size: large;
+       
+    }
+    .AddTodoContainer>form>input:focus{
+        outline: none;
+    }
+    .AddTodoContainer>form>button{ 
+        font-size: large;
+    }
+    .AddTodoContainer>form>button:disabled{
+        background-color: white;
+        color:grey;
+        border: 1px solid rgba(128, 128, 128, 0.466);
+    }
+    .AddTodoContainer>form>button:disabled:hover{
+        background-color: white;
+        border: 1px solid rgba(128, 128, 128, 0.466);
+        color:grey;
+    }
+    .AddTodoContainer>form>button:hover{
+        background-color: blue;
+        color:white;
+        border: 1px solid blue;
+    }
+}
+
+/* style for mobile screen only */
+@media screen and (max-width:500px){
+    .AddTodoContainer{
+        width:45%;
+    }
+    .AddTodoContainer>form>input{
+        width:80%;
+        font-size:medium;
+       
+    }
+    .AddTodoContainer>form>input:focus{
+        outline: none;
+    }
+    .AddTodoContainer>form>button{
+        padding: 5px 20px 5px 20px;
+        font-size: medium;
+        border-radius: 5px;
+    }
+    .AddTodoContainer>form>button:disabled{
+        background-color: white;
+        color:grey;
+        border: 1px solid rgba(128, 128, 128, 0.466);
+    }
+    .AddTodoContainer>form>button:disabled:hover{
+        background-color: white;
+        border: 1px solid rgba(128, 128, 128, 0.466);
+        color:grey;
+    }
+    .AddTodoContainer>form>button:hover{
+        background-color: blue;
+        color:white;
+        border: 1px solid blue;
+    }
+    .AddTodoContainer>form>h1{
+        font-size: larger;
+    }
+        
 }

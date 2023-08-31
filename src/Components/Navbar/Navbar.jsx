@@ -15,7 +15,7 @@ const Navbar = ({handlePopUpAddTodo}) => {
         <h3><Link to="/favourites">Favourites</Link></h3>
         <h3><Link to="/todolist">Todo List</Link></h3>
         <h3><Link to="/addtodo" onClick={handlePopUpAddTodo}>Add Todo +</Link></h3>
-        <h3><Link to="/completedtodo">Complete</Link></h3>
+        <h3><Link to="/completedtodo">Completed</Link></h3>
         </div>
         <h1 className={styles.logo}>My Todo</h1>
       </div>
