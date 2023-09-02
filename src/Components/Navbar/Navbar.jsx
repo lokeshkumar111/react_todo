@@ -1,7 +1,8 @@
 import React from 'react'
 import styles from './Navbar.module.css';
 import { Link } from 'react-router-dom';
-const Navbar = ({handlePopUpAddTodo}) => {
+const Navbar = () => {
+ 
   return (
     <div className={styles.navbar}>
       <div className={styles.navbarContainer}>
@@ -14,8 +15,9 @@ const Navbar = ({handlePopUpAddTodo}) => {
         <div className={styles.menuItems}>
         <h3><Link to="/favourites">Favourites</Link></h3>
         <h3><Link to="/todolist">Todo List</Link></h3>
-        <h3><Link to="/addtodo" onClick={handlePopUpAddTodo}>Add Todo +</Link></h3>
+        <h3><Link to="/addtodo">Add Todo +</Link></h3>
         <h3><Link to="/completedtodo">Completed</Link></h3>
+        <h3><Link to="/signin">Login</Link></h3>
         </div>
         <h1 className={styles.logo}>My Todo</h1>
       </div>

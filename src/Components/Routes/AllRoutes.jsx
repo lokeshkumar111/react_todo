@@ -7,24 +7,20 @@ import Navbar from '../Navbar/Navbar';
 import StarTodo from '../Star/StarTodo';
 import CompletedTodo from '../Completed/CompletedTodo';
 import Home from '../Home/Home';
+import Signin from '../Signin/Signin';
 const AllRoutes = () => {
 
-    const[popUpAddTodo, setPopUpAddTodo] = useState(false);
-
-    const handlePopUpAddTodo =()=>{
-        setPopUpAddTodo(!popUpAddTodo);
-        console.log(popUpAddTodo);
-    }
   return (
     <div>
       <BrowserRouter>
-            <Navbar handlePopUpAddTodo={handlePopUpAddTodo}/>
+            <Navbar/>
             <Routes>
                 <Route path='/' element={<Home/>}></Route>
                 <Route path='/favourites' element={<StarTodo/>}></Route>
                 <Route path='/addtodo' element={<Addtodo/>}></Route>
-                <Route path='/todolist' element={<TodoList handlePopUpAddTodo={handlePopUpAddTodo}/>}></Route>
+                <Route path='/todolist' element={<TodoList/>}></Route>
                 <Route path='/completedtodo' element={<CompletedTodo/>}></Route>
+                <Route path='/signin' element={<Signin/>}></Route>
             </Routes>
         </BrowserRouter>
     </div>
