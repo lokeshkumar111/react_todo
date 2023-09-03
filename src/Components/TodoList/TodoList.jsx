@@ -18,7 +18,7 @@ const TodoList = () => {
 
     useEffect(()=>{
         fetchTodo();
-    });
+    },[]);
 
     const handleDelete = (deletedTodoId) => {
     setTodo(todo.filter((ele) => ele.id !== deletedTodoId));
